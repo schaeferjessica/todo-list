@@ -13,10 +13,16 @@
     <form>
       <input type="text" class="todo__input">
       <button class="todo__btn" type="submit">+</button>
+      <div class="todo__select">
+        <select name="todos" class="todo__filter">
+          <option value="all">all todo's</option>
+          <option value="open">still open</option>
+          <option value="done">alreay done</option>
+        </select>
+      </div>
     </form>
     <div class="todo__container">
-      <ul class="todo__list">
-      </ul>
+      <ul class="todo__list"></ul>
     </div>
   </section>
   <script src="./app.js"></script>

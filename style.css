@@ -119,3 +119,43 @@ span {
   color: #242f40;
   opacity: 0.4;
 }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 25px;
+  padding-right: 40px;
+  border: 2px solid;
+  border-image-source: linear-gradient(-45deg, #cddafd,#cddafd);
+  border-image-slice: 1;
+  margin: 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+option {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.todo__select {
+  position: relative;
+  overflow: hidden;
+}
+
+.todo__select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 27px;
+  right: 32px;
+  pointer-events: none;
+}
+
+.todo__select:hover::after {
+  color: #cddafd;
+}
