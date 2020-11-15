@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(120deg, #fff, #f0efeb);
+  font-family: 'Open Sans', sans-serif;
+  color: #242f40;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+form {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+input, 
+button {
+  padding: 7px 25px;
+  position: relative;
+  font-size: 16px;
+  color: #242f40;
+  margin: 20px;
+  font-weight: 600;
+}
+
+.todo__input {
+  border: 2px solid;
+  border-image-source: linear-gradient(-45deg, #cddafd,#cddafd);
+  border-image-slice: 1;
+}
+
+form textarea:focus, 
+form input:focus {
+  outline: none;
+}
+
+button::after, 
+button::before {
+  content: "";
+  border: 2px solid;
+  border-image-slice: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform .25s ease-in-out;
+}
+
+.todo__btn::before {
+  border-image-source: linear-gradient(-45deg,#dfe7fd,#cddafd);
+}
+
+.todo__btn::after {
+  border-image-source: linear-gradient(-45deg,#dfe7fd,#cddafd);
+}
+
+.todo__check::before {
+  border-image-source: linear-gradient(-45deg,#e2ece9,#bee1e6);
+}
+
+.todo__check::after {
+  border-image-source: linear-gradient(-45deg,#e2ece9,#bee1e6);
+}
+
+.todo__delete::before {
+  border-image-source: linear-gradient(-45deg,#fde2e4,#fad2e1);
+}
+
+.todo__delete::after {
+  border-image-source: linear-gradient(-45deg,#fde2e4,#fad2e1);
+}
+
+button:before {
+  transform: translateX(-3px) translateY(-3px);
+}
+
+button:hover::before {
+  transform: translateX(3px) translateY(3px);
+}
+
+button::after {
+  transform: translateX(3px) translateY(3px);
+}
+
+button:hover::after {
+  transform: translateX(-3px) translateY(-3px);
+}
+
+button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+span {
+  font-weight: 600;
+  display: inline-block;
+}
+
+.done span {
+  text-decoration: line-through;
+  color: #242f40;
+  opacity: 0.4;
+}
